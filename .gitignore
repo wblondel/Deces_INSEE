@@ -1,0 +1,9 @@
+# Configuration
+.env
+conf/nginx/vars.conf
+
+# Data
+data/
+
+# Logs
+logs/
