@@ -2,8 +2,12 @@
 .env
 conf/nginx/vars.conf
 
+
 # Data
-data/
+data/certbot/*/*
+!data/certbot/*/.gitkeep
 
 # Logs
-logs/
+logs/nginx/*
+!logs/nginx/.gitkeep
+
