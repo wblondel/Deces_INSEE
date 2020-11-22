@@ -7,8 +7,8 @@ services:
     environment:
       node.name: log01
       http.host: "0.0.0.0"
-      xpack.monitoring.collection.enabled: 'false'
-      cacert: ${CERTS_DIR:?err}/ca/ca.crt
+      xpack.monitoring.enabled: 'false'
+      CACERT: ${CERTS_DIR:?err}/ca/ca.crt
       S3_SCW_ACCESS_KEY_ID: ${S3_SCW_ACCESS_KEY_ID}
       S3_SCW_SECRET_ACCESS_KEY: ${S3_SCW_SECRET_ACCESS_KEY}
       LOGSTASH_USER: ${LOGSTASH_USER}
