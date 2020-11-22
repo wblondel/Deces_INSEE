@@ -33,6 +33,13 @@ services:
       - "9200"
     networks:
       - elastic
+    #commented until there is a way to get cluster health without authentication
+    #healthcheck:
+      #test: ["CMD", "curl", "-f", "-X", "GET", "https://localhost:9200/_cluster_health?wait_for_status=green&timeout=1s"]
+      #interval: 5s
+      #timeout: 3s
+      #retries: 3
+      #start_period: 60s
       
   es02:
     image: docker.elastic.co/elasticsearch/elasticsearch:${ELK_VERSION:?err}
@@ -120,6 +127,12 @@ services:
       - certs:${CERTS_DIR:?err}
     networks:
       - elastic
+    healthcheck:
+      test: ["CMD", "curl", "--cacert", "$CERTS_DIR/ca/ca.crt", "-s", "-f", "https://localhost:5601/login"]
+      interval: 5s
+      timeout: 3s
+      retries: 3
+      start_period: 60s
       
   nginx:
     container_name: nginx01
