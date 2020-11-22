@@ -3,8 +3,7 @@
 
 2. Copy .env.example to .env
 
-3. Copy conf/nginx/vars.conf.example to conf/nginx/vars.conf and edit it
-$cert_name is the first domain in the SSL cert you will generate
+3. Edit conf/nginx/sites-enabled/ conf files
 
 4. Create self-signed certificate for Nginx default HTTPS server
 ```

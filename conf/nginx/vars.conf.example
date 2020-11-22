@@ -1,3 +1,0 @@
-set $kibana_server_name kibana.example.com;
-set $es_server_name     es.example.com;
-set $cert_name          es.example.com;
