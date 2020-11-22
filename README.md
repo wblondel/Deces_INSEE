@@ -3,7 +3,7 @@
 
 2. Copy .env.example to .env
 
-3. Edit conf/nginx/sites-enabled/ conf files
+3. Edit conf/nginx/sites-enabled/ conf files (don't modify example files)
 
 4. Create self-signed certificate for Nginx default HTTPS server
 ```

@@ -1,6 +1,5 @@
 # Environment variables and Nginx variables
 .env
-conf/nginx/vars.conf
 
 # Nginx self-signed certificates
 conf/nginx/ssl/*
