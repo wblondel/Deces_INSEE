@@ -1,0 +1,31 @@
+version: "3.8"
+services:
+
+  log01:
+    image: docker.elastic.co/logstash/logstash:${ELK_VERSION:?err}
+    container_name: log01
+    environment:
+      node.name: log01
+      http.host: "0.0.0.0"
+      xpack.monitoring.collection.enabled: 'false'
+      cacert: ${CERTS_DIR:?err}/ca/ca.crt
+      S3_SCW_ACCESS_KEY_ID: ${S3_SCW_ACCESS_KEY_ID}
+      S3_SCW_SECRET_ACCESS_KEY: ${S3_SCW_SECRET_ACCESS_KEY}
+      LOGSTASH_USER: ${LOGSTASH_USER}
+      LOGSTASH_PASSWORD: ${LOGSTASH_PASSWORD}
+    volumes:
+      - ./conf/logstash/pipeline:/usr/share/logstash/pipeline
+      - datalog01:/usr/share/logstash/data
+      - certs:${CERTS_DIR:?err}
+    networks:
+      - elastic
+
+volumes:
+  datalog01:
+    driver: local
+  certs:
+    driver: local
+
+networks:
+  elastic:
+    driver: bridge

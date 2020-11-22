@@ -24,3 +24,10 @@ instances:
     dns:
       - kib01
       - localhost
+      
+  - name: log01
+    dns:
+      - log01
+      - localhost
+    ip:
+      - 127.0.0.1
