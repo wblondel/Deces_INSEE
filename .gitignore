@@ -5,6 +5,12 @@
 conf/nginx/ssl/*
 !conf/nginx/ssl/.gitkeep
 
+# Nginx vhosts
+conf/nginx/sites-enabled/*
+!conf/nginx/sites-enabled/00-default.conf
+!conf/nginx/sites-enabled/01-kibana.conf.example
+!conf/nginx/sites-enabled/02-elastic.conf.example
+
 # Data
 data/certbot/*/*
 !data/certbot/*/.gitkeep
