@@ -4,8 +4,6 @@
 
 # HTTPS
 server {
-    include             /etc/nginx/vars.conf;
-    
     listen              443 ssl http2;
     #listen              [::]:443 ssl http2;
     server_name         KIBANASERVERNAME;
@@ -34,8 +32,6 @@ server {
 # HTTP to HTTPS redirect
 # .well-known directory for certbot http verification
 server { 
-    include     /etc/nginx/vars.conf;
-    
     listen      80;
     #listen      [::]:80;
     server_name KIBANASERVERNAME;
