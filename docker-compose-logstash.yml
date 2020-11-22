@@ -13,8 +13,10 @@ services:
       S3_SCW_SECRET_ACCESS_KEY: ${S3_SCW_SECRET_ACCESS_KEY}
       LOGSTASH_USER: ${LOGSTASH_USER}
       LOGSTASH_PASSWORD: ${LOGSTASH_PASSWORD}
+      LS_JAVA_OPTS: "-Xms1g -Xmx1g"
     volumes:
       - ./conf/logstash/pipeline:/usr/share/logstash/pipeline
+      - ./logs/logstash:/usr/share/logstash/logs
       - datalog01:/usr/share/logstash/data
       - certs:${CERTS_DIR:?err}
     networks:
