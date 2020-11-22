@@ -6,23 +6,28 @@
 3. Copy conf/nginx/vars.conf.example to conf/nginx/vars.conf and edit it
 $cert_name is the first domain in the SSL cert you will generate
 
-4. 
+4. Create self-signed certificate for Nginx default HTTPS server
+```
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ./conf/nginx/ssl/nginx.key -out ./conf/nginx/ssl/nginx.crt
+```
+
+5. 
 ```
 chmod +x init-letencrypt
 ./init-letsencrypt.sh
 ```
 (must be root)
 
-5. Start the stack
+6. Start the stack
 
-6. Generate passwords
+7. Generate passwords
 ```
 docker exec es01 /bin/bash -c "bin/elasticsearch-setup-passwords auto --batch --url https://es01:9200"
 ```
 
-7. Fill in .env
+8. Fill in .env
 
-8. Restart the stack
+9. Restart the stack
 ```
 docker-compose stop
 docker-compose up -d

@@ -128,10 +128,10 @@ services:
     ports:
       - "80:80"
       - "443:443"
-      - "8080:8080"
     volumes:
-      - ./conf/nginx/config.conf:/etc/nginx/conf.d/config.conf
+      - ./conf/nginx/sites-enabled:/etc/nginx/sites-enabled
       - ./conf/nginx/vars.conf:/etc/nginx/vars.conf
+      - ./conf/nginx/ssl:/etc/nginx/ssl
       - ./logs/nginx:/var/log/nginx
       - ./data/certbot/www:/var/www/certbot
       - ./data/certbot/conf:/etc/letsencrypt
