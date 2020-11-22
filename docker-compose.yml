@@ -131,6 +131,7 @@ services:
     volumes:
       - ./conf/nginx/sites-enabled:/etc/nginx/sites-enabled
       - ./conf/nginx/vars.conf:/etc/nginx/vars.conf
+      - ./conf/nginx/nginx.conf:/etc/nginx/nginx.conf
       - ./conf/nginx/ssl:/etc/nginx/ssl
       - ./logs/nginx:/var/log/nginx
       - ./data/certbot/www:/var/www/certbot
