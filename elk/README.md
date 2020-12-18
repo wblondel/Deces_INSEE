@@ -25,6 +25,7 @@ docker exec es01 /bin/bash -c "bin/elasticsearch-setup-passwords auto --batch --
 ```
 
 8. Fill in .env
+(LOGSTASH_USER LOGSTASH_PASSWORD are credentials for the user you will use in your logstash pipeline (aka NOT logstash_system)
 
 9. Restart the stack
 ```
