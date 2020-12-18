@@ -1,0 +1,24 @@
+version: '3.8'
+services:
+
+  typesense:
+    image: typesense/typesense:${TS_VERSION:?err}
+    environment:
+      TYPESENSE_DATA_DIR: /data
+      TYPESENSE_API_KEY: ${TS_API_KEY:?err}
+      TYPESENSE_API_ADDRESS: 127.0.0.1
+      TYPESENSE_API_PORT: 8108
+      TYPESENSE_LOG_DIR: /logs
+      TYPESENSE_ENABLE_CORS: ${TS_ENABLE_CORS:?err}
+    volumes:
+      - ./data:/data
+      - ./logs:/logs
+    ports:
+      - '8962:8108'
+    networks:
+      - typesense
+    restart: always
+    
+networks:
+  typesense:
+    driver: bridge

@@ -1,0 +1,11 @@
+# Environment variables and Nginx variables
+.env
+
+# Data
+data/*
+!data/.gitkeep
+
+# Logs
+logs/*
+!logs/.gitkeep
+
