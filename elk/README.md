@@ -18,17 +18,28 @@ chmod +x init-letencrypt
 (must be root)
 
 6. Start the stack
+```
+docker-compose up -d
+```
 
 7. Generate passwords
 ```
 docker exec es01 /bin/bash -c "bin/elasticsearch-setup-passwords auto --batch --url https://es01:9200"
 ```
 
-8. Fill in .env
-(LOGSTASH_USER LOGSTASH_PASSWORD are credentials for the user you will use in your logstash pipeline (aka NOT logstash_system)
+8. Fill in .env, except LOGSTASH_USER and LOGSTASH_PASSWORD
+LOGSTASH_USER and LOGSTASH_PASSWORD are credentials for the user you will use in your logstash pipeline (aka NOT logstash_system)
 
-9. Restart the stack
+9. Create your LOGSTASH_USER in Kibana and assign the correct roles (see ELK doc)
+
+10. Stop the stack
 ```
 docker-compose stop
+```
+
+11. Fill in .env
+
+12. Start the stack
+```
 docker-compose up -d
 ```
