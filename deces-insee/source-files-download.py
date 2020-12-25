@@ -14,3 +14,4 @@ for file_url in files_url:
     value, params = cgi.parse_header(blah)
     filename = params['filename']
     urlretrieve(url, data_zip_folder + filename)
+    print(url)
