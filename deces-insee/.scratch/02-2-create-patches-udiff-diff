@@ -1,0 +1,66 @@
+#!/usr/bin/env bash
+
+# This is not multiplatform... too bad.
+# TODO: Seriously. Use a loop. And variables. And make it portable.
+
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_1970.csv ./02-corrected/csv/deces_1970.csv > patches/deces_1970.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_1971.csv ./02-corrected/csv/deces_1971.csv > patches/deces_1971.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_1972.csv ./02-corrected/csv/deces_1972.csv > patches/deces_1972.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_1973.csv ./02-corrected/csv/deces_1973.csv > patches/deces_1973.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_1974.csv ./02-corrected/csv/deces_1974.csv > patches/deces_1974.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_1975.csv ./02-corrected/csv/deces_1975.csv > patches/deces_1975.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_1976.csv ./02-corrected/csv/deces_1976.csv > patches/deces_1976.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_1977.csv ./02-corrected/csv/deces_1977.csv > patches/deces_1977.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_1978.csv ./02-corrected/csv/deces_1978.csv > patches/deces_1978.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_1979.csv ./02-corrected/csv/deces_1979.csv > patches/deces_1979.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_1980.csv ./02-corrected/csv/deces_1980.csv > patches/deces_1980.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_1981.csv ./02-corrected/csv/deces_1981.csv > patches/deces_1981.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_1982.csv ./02-corrected/csv/deces_1982.csv > patches/deces_1982.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_1983.csv ./02-corrected/csv/deces_1983.csv > patches/deces_1983.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_1984.csv ./02-corrected/csv/deces_1984.csv > patches/deces_1984.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_1985.csv ./02-corrected/csv/deces_1985.csv > patches/deces_1985.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_1986.csv ./02-corrected/csv/deces_1986.csv > patches/deces_1986.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_1987.csv ./02-corrected/csv/deces_1987.csv > patches/deces_1987.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_1988.csv ./02-corrected/csv/deces_1988.csv > patches/deces_1988.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_1989.csv ./02-corrected/csv/deces_1989.csv > patches/deces_1989.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_1990.csv ./02-corrected/csv/deces_1990.csv > patches/deces_1990.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_1991.csv ./02-corrected/csv/deces_1991.csv > patches/deces_1991.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_1992.csv ./02-corrected/csv/deces_1992.csv > patches/deces_1992.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_1993.csv ./02-corrected/csv/deces_1993.csv > patches/deces_1993.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_1994.csv ./02-corrected/csv/deces_1994.csv > patches/deces_1994.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_1995.csv ./02-corrected/csv/deces_1995.csv > patches/deces_1995.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_1996.csv ./02-corrected/csv/deces_1996.csv > patches/deces_1996.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_1997.csv ./02-corrected/csv/deces_1997.csv > patches/deces_1997.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_1998.csv ./02-corrected/csv/deces_1998.csv > patches/deces_1998.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_1999.csv ./02-corrected/csv/deces_1999.csv > patches/deces_1999.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_2000.csv ./02-corrected/csv/deces_2000.csv > patches/deces_2000.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_2001.csv ./02-corrected/csv/deces_2001.csv > patches/deces_2001.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_2002.csv ./02-corrected/csv/deces_2002.csv > patches/deces_2002.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_2003.csv ./02-corrected/csv/deces_2003.csv > patches/deces_2003.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_2004.csv ./02-corrected/csv/deces_2004.csv > patches/deces_2004.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_2005.csv ./02-corrected/csv/deces_2005.csv > patches/deces_2005.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_2006.csv ./02-corrected/csv/deces_2006.csv > patches/deces_2006.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_2007.csv ./02-corrected/csv/deces_2007.csv > patches/deces_2007.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_2008.csv ./02-corrected/csv/deces_2008.csv > patches/deces_2008.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_2009.csv ./02-corrected/csv/deces_2009.csv > patches/deces_2009.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_2010.csv ./02-corrected/csv/deces_2010.csv > patches/deces_2010.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_2011.csv ./02-corrected/csv/deces_2011.csv > patches/deces_2011.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_2012.csv ./02-corrected/csv/deces_2012.csv > patches/deces_2012.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_2013.csv ./02-corrected/csv/deces_2013.csv > patches/deces_2013.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_2014.csv ./02-corrected/csv/deces_2014.csv > patches/deces_2014.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_2015.csv ./02-corrected/csv/deces_2015.csv > patches/deces_2015.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_2016.csv ./02-corrected/csv/deces_2016.csv > patches/deces_2016.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_2017.csv ./02-corrected/csv/deces_2017.csv > patches/deces_2017.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_2018.csv ./02-corrected/csv/deces_2018.csv > patches/deces_2018.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_2019.csv ./02-corrected/csv/deces_2019.csv > patches/deces_2019.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_2020_m01.csv ./02-corrected/csv/deces_2020_m01.csv > patches/deces_2020_m01.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_2020_m02.csv ./02-corrected/csv/deces_2020_m02.csv > patches/deces_2020_m02.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_2020_m03.csv ./02-corrected/csv/deces_2020_m03.csv > patches/deces_2020_m03.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_2020_m04.csv ./02-corrected/csv/deces_2020_m04.csv > patches/deces_2020_m04.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_2020_m05.csv ./02-corrected/csv/deces_2020_m05.csv > patches/deces_2020_m05.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_2020_m06.csv ./02-corrected/csv/deces_2020_m06.csv > patches/deces_2020_m06.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_2020_m07.csv ./02-corrected/csv/deces_2020_m07.csv > patches/deces_2020_m07.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_2020_m08.csv ./02-corrected/csv/deces_2020_m08.csv > patches/deces_2020_m08.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_2020_m09.csv ./02-corrected/csv/deces_2020_m09.csv > patches/deces_2020_m09.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_2020_m10.csv ./02-corrected/csv/deces_2020_m10.csv > patches/deces_2020_m10.csv.patch
+diff -Nar -U 0 --speed-large-files ./01-renamed/csv/deces_2020_m11.csv ./02-corrected/csv/deces_2020_m11.csv > patches/deces_2020_m11.csv.patch
