@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# This is not multiplatform... too bad.
+
+shopt -s nullglob
+for source_file in ./00-source/csv/*.csv
+do
+  base_name="$(basename -- $source_file)"
+  corrected_file=./01-corrected/csv/$base_name
+
+  diff -Nar -U 0 $source_file $corrected_file > patches/$base_name.patch
+done

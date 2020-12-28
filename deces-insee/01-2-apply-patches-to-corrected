@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# This is not multiplatform... but at least it is fast!
+# git patch is slow as f.
+
+shopt -s nullglob
+for patch_file in ./patches/*.patch
+do
+  base_name="$(basename -- $patch_file .patch)"
+  corrected_file=./01-corrected/csv/$base_name
+
+  patch $corrected_file < patches/$base_name.patch
+done

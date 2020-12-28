@@ -4,14 +4,8 @@
 00-source/zip/*
 !00-source/zip/.gitkeep
 
-# Renamed CSV and GZ files
-01-renamed/csv/*
-!01-renamed/csv/.gitkeep
-01-renamed/gz/*
-!01-renamed/gz/.gitkeep
-
 # Corrected CSV and GZ files
-02-corrected/csv/*
-!02-corrected/csv/.gitkeep
-02-corrected/gz/*
-!02-corrected/gz/.gitkeep
+01-corrected/csv/*
+!01-corrected/csv/.gitkeep
+01-corrected/gz/*
+!01-corrected/gz/.gitkeep
