@@ -4,10 +4,14 @@
 # git patch is slow as f.
 
 shopt -s nullglob
-for patch_file in ./patches/*.patch
+
+corrected_csv_folder="./01-corrected/csv"
+patches_folder="./patches"
+
+for patch_file in $patches_folder/*.patch
 do
   base_name="$(basename -- $patch_file .patch)"
-  corrected_file=./01-corrected/csv/$base_name
+  corrected_file=$corrected_csv_folder/$base_name
 
-  patch $corrected_file < patches/$base_name.patch
+  patch $corrected_file < $patch_file
 done
