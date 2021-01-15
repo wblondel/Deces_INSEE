@@ -139,13 +139,14 @@ def check_fields(csv_dir, full_name, gender, date, postcode, city):
 
                 if city:
                     if not tests.city_empty_when_postcode_990(row):
-                        errors.append("Valeur du champ commune inutile.")
+                        errors.append("Valeur du champ commune de naissance inutile. "
+                                      "Le code lieu indique déjà que la commune est inconnue.")
 
                     if tests.city_not_known(row):
                         errors.append("Valeur du champ commune inutile.")
 
-                    #if not tests.city_correctly_formated_when_arrondissement(row):
-                    #    errors.append("Format requis: VILLE (X)X")
+                    if not tests.city_correctly_formated_when_arrondissement(row):
+                        errors.append("Format requis: VILLE (X)X")
 
                 if errors:
                     print(f"{deathreader.line_num} {row} {errors}")
