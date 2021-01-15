@@ -1,0 +1,15 @@
+# Source CSV and ZIP files
+data/source/csv/*
+!data/source/csv/.gitkeep
+data/source/zip/*
+!data/source/zip/.gitkeep
+
+# Corrected CSV and GZ files
+data/corrected/csv/*
+!data/corrected/csv/.gitkeep
+data/corrected/gz/*
+!data/corrected/gz/.gitkeep
+
+tests
+__pycache__
+.idea

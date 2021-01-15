@@ -1,0 +1,14 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+click = "~=7.1"
+more-itertools = "~=8.6"
+regex = "~=2020.11.13"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"

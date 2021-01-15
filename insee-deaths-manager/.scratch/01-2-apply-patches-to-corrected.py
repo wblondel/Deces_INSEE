@@ -1,4 +1,4 @@
-# TOO SLOW
+# REALLY TOO SLOW
 
 from pathlib import Path
 import subprocess
