@@ -31,7 +31,7 @@ def dates_are_int(row):
 
 
 def city_empty_when_postcode_990(row):
-    if row[3].endswith('990'):
+    if row[3].endswith('990') and not row[3].startswith('99'):
         return not row[4]
     return True
 
@@ -40,15 +40,15 @@ def city_correctly_formated_when_arrondissement(row):
     import regex
 
     if row[3].startswith('751'):
-        return regex.match(r'(^PARIS \d{1,2}$)', row[4])
+        return regex.match(r'(^PARIS \d{1,2}$)', row[4]) or row[4] == ""
 
     if row[3].startswith('6938'):
         if row[3] == '69389' and row[4] == "SAINT-RAMBERT-L'ILE-BARBE":
             return True
-        return regex.match(r'(^LYON \d{1,2}$)', row[4])
+        return regex.match(r'(^LYON \d{1,2}$)', row[4]) or row[4] == ""
 
     if row[3].startswith('132'):
-        return regex.match(r'(^MARSEILLE \d{1,2}$)', row[4])
+        return regex.match(r'(^MARSEILLE \d{1,2}$)', row[4]) or row[4] == ""
 
     return True
 
