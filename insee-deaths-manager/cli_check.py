@@ -1,6 +1,7 @@
 import click
 from pathlib import Path
 import csv
+import pprint
 
 
 @click.group(name='check')
@@ -109,6 +110,8 @@ def check_fields(csv_dir, full_name, gender, date, postcode, city):
     else:
         csv_files = [csv_dir]
 
+    counts = {}
+
     for csv_file in csv_files:
         click.echo(f"Opening {csv_file}")
         with csv_file.open('r', encoding='utf-8', errors='strict') as csvfile:
@@ -143,12 +146,19 @@ def check_fields(csv_dir, full_name, gender, date, postcode, city):
                                       "Le code lieu indique déjà que la commune est inconnue.")
 
                     if tests.city_not_known(row):
-                        errors.append("Valeur du champ commune inutile.")
+                        errors.append("Valeur du champ commune inutile ou incorrecte.")
 
                     if not tests.city_correctly_formated_when_arrondissement(row):
                         errors.append("Format requis: VILLE (X)X")
+                        if row[4] in counts:
+                            counts[row[4]] += 1
+                        else:
+                            counts[row[4]] = 1
 
                 if errors:
                     print(f"{deathreader.line_num} {row} {errors}")
 
         click.echo(f"Closing {csv_file}")
+    
+    if city:
+        pprint.pprint({k: v for k, v in sorted(counts.items(), key=lambda item: item[1])}, sort_dicts=False)
