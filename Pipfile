@@ -5,7 +5,7 @@ name = "pypi"
 
 [packages]
 click = "~=7.1"
-more-itertools = "~=8.7"
+more-itertools = "~=8.8"
 regex = "~=2021.4.4"
 
 [dev-packages]
